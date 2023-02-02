@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: 'Raleway', sans-serif;
+}
+
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 5rem
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.change-button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.change-button:hover {
+    background-color: #f1f1f1;
+}
+
+.loading-image{
+  animation-name: spinTheImage;
+  animation-iteration-count: infinite;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  border-radius: 50%;
+  }
+  
+  @keyframes spinTheImage {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+.inside-circle {
+    border-radius: 50%;
+    animation-name: popTheBall;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes popTheBall {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(60px);
+    }
+}
+
+
+
+.big {
+    width: 22px;
+    height: 22px;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .button-container {
+        flex-direction: column;
+    }
+}
